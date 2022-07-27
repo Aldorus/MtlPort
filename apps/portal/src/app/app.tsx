@@ -1,28 +1,29 @@
-import React, { useEffect, useState } from 'react';
-import { Message } from '@mtlport/api-interfaces';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BEMClassName } from '@mtlport/react-lib';
+import { Dashboard } from '../pages/Dashboard.page';
+import { Navigation } from '../components/Navigation';
+import './app.module.scss';
 
-export const App = () => {
-  const [m, setMessage] = useState<Message>({ message: '' });
-
-  useEffect(() => {
-    fetch('/api')
-      .then((r) => r.json())
-      .then(setMessage);
-  }, []);
-
+export type AppProps = React.HTMLAttributes<HTMLElement>;
+export const App: React.FC<AppProps> = ({ ...props }) => {
+  const namespace = BEMClassName(App, props.className);
   return (
-    <>
-      <div style={{ textAlign: 'center' }}>
-        <h1>Welcome to portal!</h1>
-        <img
-          width="450"
-          src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-          alt="Nx - Smart, Fast and Extensible Build System"
-        />
-      </div>
-      <div>{m.message}</div>
-    </>
+    <div
+      data-testid={App.displayName}
+      {...props}
+      className={namespace.blocksNames()}
+    >
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Navigation />}>
+            <Route index element={<Dashboard />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 };
 
+App.displayName = 'App';
 export default App;

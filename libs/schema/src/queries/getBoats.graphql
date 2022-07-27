@@ -1,0 +1,6 @@
+query GetBoats {
+  boats {
+    id
+    name
+  }
+}

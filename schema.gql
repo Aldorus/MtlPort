@@ -1,0 +1,25 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+directive @upper on FIELD_DEFINITION
+
+"""boat"""
+type Boat {
+  id: ID!
+  name: String!
+}
+
+"""container"""
+type Container {
+  id: ID!
+  content: String!
+  boat: Boat
+}
+
+type Query {
+  boat(id: String!): Boat!
+  boats: [Boat!]!
+  container(id: String!): Container!
+  containers: [Container!]!
+}

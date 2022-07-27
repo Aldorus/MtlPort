@@ -1,0 +1,8 @@
+@mixin variant {
+  color: var(--color-ternary);
+
+  &--light {
+    color: var(--color-light);
+  }
+
+}

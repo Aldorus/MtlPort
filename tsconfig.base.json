@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "resolveJsonModule": true,
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
@@ -15,7 +16,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@mtlport/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@mtlport/design-system": ["libs/design-system/src/index.ts"],
+      "@mtlport/react-lib": ["libs/react-lib/src/index.ts"],
+      "@mtlport/schema": ["libs/schema/src/index.ts"],
+      "@mtlport/typescript-lib": ["libs/typescript-lib/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

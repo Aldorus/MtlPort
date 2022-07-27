@@ -1,1 +1,5 @@
-/* Your styles goes here. */
+@use '../../../../libs/design-system/src/tokens/colors';
+
+body {
+  background: var(--color-light);
+}

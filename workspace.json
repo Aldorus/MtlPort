@@ -3,8 +3,12 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
-    "api-interfaces": "libs/api-interfaces",
+    "design-system": "libs/design-system",
+    "design-system-e2e": "apps/design-system-e2e",
     "portal": "apps/portal",
-    "portal-e2e": "apps/portal-e2e"
+    "portal-e2e": "apps/portal-e2e",
+    "react-lib": "libs/react-lib",
+    "schema": "libs/schema",
+    "typescript-lib": "libs/typescript-lib"
   }
 }
