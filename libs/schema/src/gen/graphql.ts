@@ -20,8 +20,12 @@ export type Scalars = {
 /** boat */
 export type Boat = {
   __typename?: 'Boat';
+  containerCount?: Maybe<Scalars['Float']>;
+  containers?: Maybe<Array<Container>>;
   id: Scalars['ID'];
   name: Scalars['String'];
+  timeOfArrival?: Maybe<Scalars['String']>;
+  transitStatus?: Maybe<Scalars['String']>;
 };
 
 /** container */
@@ -122,6 +126,7 @@ export type ResolversTypes = {
   Boat: ResolverTypeWrapper<Boat>;
   Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
   Container: ResolverTypeWrapper<Container>;
+  Float: ResolverTypeWrapper<Scalars['Float']>;
   ID: ResolverTypeWrapper<Scalars['ID']>;
   Query: ResolverTypeWrapper<{}>;
   String: ResolverTypeWrapper<Scalars['String']>;
@@ -132,6 +137,7 @@ export type ResolversParentTypes = {
   Boat: Boat;
   Boolean: Scalars['Boolean'];
   Container: Container;
+  Float: Scalars['Float'];
   ID: Scalars['ID'];
   Query: {};
   String: Scalars['String'];
@@ -142,8 +148,12 @@ export type UpperDirectiveArgs = { };
 export type UpperDirectiveResolver<Result, Parent, ContextType = any, Args = UpperDirectiveArgs> = DirectiveResolverFn<Result, Parent, ContextType, Args>;
 
 export type BoatResolvers<ContextType = any, ParentType extends ResolversParentTypes['Boat'] = ResolversParentTypes['Boat']> = {
+  containerCount?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
+  containers?: Resolver<Maybe<Array<ResolversTypes['Container']>>, ParentType, ContextType>;
   id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   name?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  timeOfArrival?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  transitStatus?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
@@ -174,7 +184,12 @@ export type DirectiveResolvers<ContextType = any> = {
 export type GetBoatsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetBoatsQuery = { __typename?: 'Query', boats: Array<{ __typename?: 'Boat', id: string, name: string }> };
+export type GetBoatsQuery = { __typename?: 'Query', boats: Array<{ __typename?: 'Boat', id: string, name: string, containerCount?: number | null, transitStatus?: string | null, timeOfArrival?: string | null }> };
+
+export type GetContainerQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetContainerQuery = { __typename?: 'Query', containers: Array<{ __typename?: 'Container', id: string, content: string }> };
 
 
 export const GetBoatsDocument = gql`
@@ -182,6 +197,9 @@ export const GetBoatsDocument = gql`
   boats {
     id
     name
+    containerCount
+    transitStatus
+    timeOfArrival
   }
 }
     `;
@@ -212,3 +230,38 @@ export function useGetBoatsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<G
 export type GetBoatsQueryHookResult = ReturnType<typeof useGetBoatsQuery>;
 export type GetBoatsLazyQueryHookResult = ReturnType<typeof useGetBoatsLazyQuery>;
 export type GetBoatsQueryResult = Apollo.QueryResult<GetBoatsQuery, GetBoatsQueryVariables>;
+export const GetContainerDocument = gql`
+    query GetContainer {
+  containers {
+    id
+    content
+  }
+}
+    `;
+
+/**
+ * __useGetContainerQuery__
+ *
+ * To run a query within a React component, call `useGetContainerQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetContainerQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetContainerQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetContainerQuery(baseOptions?: Apollo.QueryHookOptions<GetContainerQuery, GetContainerQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GetContainerQuery, GetContainerQueryVariables>(GetContainerDocument, options);
+      }
+export function useGetContainerLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetContainerQuery, GetContainerQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GetContainerQuery, GetContainerQueryVariables>(GetContainerDocument, options);
+        }
+export type GetContainerQueryHookResult = ReturnType<typeof useGetContainerQuery>;
+export type GetContainerLazyQueryHookResult = ReturnType<typeof useGetContainerLazyQuery>;
+export type GetContainerQueryResult = Apollo.QueryResult<GetContainerQuery, GetContainerQueryVariables>;

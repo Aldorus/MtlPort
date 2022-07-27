@@ -1,0 +1,6 @@
+query GetContainer {
+  containers {
+    id
+    content
+  }
+}

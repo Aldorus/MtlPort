@@ -12,13 +12,13 @@
         "outputPath": "dist/apps/portal",
         "index": "apps/portal/src/index.html",
         "baseHref": "/",
-        "main": "apps/portal/src/main.tsx",
+        "main": "apps/portal/src/main.ts",
         "polyfills": "apps/portal/src/polyfills.ts",
         "tsConfig": "apps/portal/tsconfig.app.json",
-        "assets": ["apps/portal/src/favicon.ico"],
+        "assets": ["apps/portal/src/favicon.ico", "apps/portal/src/assets"],
         "styles": ["apps/portal/src/styles.scss"],
         "scripts": [],
-        "webpackConfig": "@nrwl/react/plugins/webpack"
+        "webpackConfig": "apps/portal/webpack.config.js"
       },
       "configurations": {
         "development": {
@@ -39,17 +39,18 @@
           "sourceMap": false,
           "namedChunks": false,
           "extractLicenses": true,
-          "vendorChunk": false
+          "vendorChunk": false,
+          "webpackConfig": "apps/portal/webpack.config.prod.js"
         }
       }
     },
     "serve": {
-      "executor": "@nrwl/web:dev-server",
+      "executor": "@nrwl/react:module-federation-dev-server",
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "portal:build",
         "hmr": true,
-        "proxyConfig": "apps/portal/proxy.conf.json"
+        "port": 4200
       },
       "configurations": {
         "development": {
@@ -74,6 +75,22 @@
       "options": {
         "jestConfig": "apps/portal/jest.config.ts",
         "passWithNoTests": true
+      }
+    },
+    "serve-static": {
+      "executor": "@nrwl/web:file-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "portal:build",
+        "port": 4200
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "portal:build:development"
+        },
+        "production": {
+          "buildTarget": "portal:build:production"
+        }
       }
     }
   },

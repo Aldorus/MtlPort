@@ -2,5 +2,8 @@ query GetBoats {
   boats {
     id
     name
+    containerCount
+    transitStatus
+    timeOfArrival
   }
 }

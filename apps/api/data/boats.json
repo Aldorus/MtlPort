@@ -1,5 +1,1 @@
-[
-  { "id": "27b6e5bb-2f58-420c-bed2-8a76c2faee9d", "name": "Yu Mthethwa" },
-  { "id": "af770cd0-8d97-4ca4-8070-50afd381d8f1", "name": "Somkhit Saidu" },
-  { "id": "da20b995-2534-4325-99a8-90567009174f", "name": "Laura Kok" }
-]
+[{"id":"e72e6376-be8b-4b90-85da-28234d1a91ad","name":"Stefan Álvarez","transitStatus":"arrived","timeOfArrival":"2 days"},{"id":"7e91973d-afbb-4090-b45d-f3f9d08be893","name":"Helga López","transitStatus":"arrived","timeOfArrival":"1 days"},{"id":"2d38228b-b09f-4519-862a-02c1019f2864","name":"Mercy Goto","transitStatus":"arrived","timeOfArrival":"1 days"},{"id":"c80a8605-d4f1-4cda-b0ca-a3b5c2393ecc","name":"Adamu Sánchez","transitStatus":"incoming","timeOfArrival":"1 days"}]

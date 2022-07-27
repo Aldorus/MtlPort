@@ -2,13 +2,13 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "admin": "apps/admin",
     "api": "apps/api",
     "design-system": "libs/design-system",
-    "design-system-e2e": "apps/design-system-e2e",
     "portal": "apps/portal",
-    "portal-e2e": "apps/portal-e2e",
     "react-lib": "libs/react-lib",
     "schema": "libs/schema",
+    "tower-control": "apps/tower-control",
     "typescript-lib": "libs/typescript-lib"
   }
 }

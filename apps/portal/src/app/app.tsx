@@ -1,29 +1,40 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { BEMClassName } from '@mtlport/react-lib';
-import { Dashboard } from '../pages/Dashboard.page';
-import { Navigation } from '../components/Navigation';
+import * as React from 'react';
+import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 import './app.module.scss';
+import { Welcome } from '../pages/Welcome';
+import { Menu } from 'antd';
+import { Button } from '@mtlport/design-system';
 
-export type AppProps = React.HTMLAttributes<HTMLElement>;
-export const App: React.FC<AppProps> = ({ ...props }) => {
-  const namespace = BEMClassName(App, props.className);
+const Admin = React.lazy(() => import('admin/Module'));
+
+const TowerControl = React.lazy(() => import('tower-control/Module'));
+
+const items = [
+  { label: 'Home', key: '/' },
+  { label: 'Admin', key: '/admin' },
+  {
+    label: 'Tower Control',
+    key: '/tower-control',
+  },
+];
+
+export function App() {
+  const navigate = useNavigate();
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  const handleMenuChange = (item) => {
+    navigate(item.key);
+  };
   return (
-    <div
-      data-testid={App.displayName}
-      {...props}
-      className={namespace.blocksNames()}
-    >
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Navigation />}>
-            <Route index element={<Dashboard />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <React.Suspense fallback={null}>
+      <Menu items={items} mode="horizontal" onClick={handleMenuChange} />
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/tower-control/*" element={<TowerControl />} />
+      </Routes>
+    </React.Suspense>
   );
-};
+}
 
-App.displayName = 'App';
 export default App;

@@ -1,0 +1,101 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/tower-control/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/tower-control",
+        "index": "apps/tower-control/src/index.html",
+        "baseHref": "/",
+        "main": "apps/tower-control/src/main.ts",
+        "polyfills": "apps/tower-control/src/polyfills.ts",
+        "tsConfig": "apps/tower-control/tsconfig.app.json",
+        "assets": [
+          "apps/tower-control/src/favicon.ico",
+          "apps/tower-control/src/assets"
+        ],
+        "styles": ["apps/tower-control/src/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "apps/tower-control/webpack.config.js"
+      },
+      "configurations": {
+        "development": {
+          "extractLicenses": false,
+          "optimization": false,
+          "sourceMap": true,
+          "vendorChunk": true
+        },
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/tower-control/src/environments/environment.ts",
+              "with": "apps/tower-control/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "webpackConfig": "apps/tower-control/webpack.config.prod.js"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/react:module-federation-dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "tower-control:build",
+        "hmr": true,
+        "port": 4202
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "tower-control:build:development"
+        },
+        "production": {
+          "buildTarget": "tower-control:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/tower-control/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/tower-control"],
+      "options": {
+        "jestConfig": "apps/tower-control/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "serve-static": {
+      "executor": "@nrwl/web:file-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "tower-control:build",
+        "port": 4202
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "tower-control:build:development"
+        },
+        "production": {
+          "buildTarget": "tower-control:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
