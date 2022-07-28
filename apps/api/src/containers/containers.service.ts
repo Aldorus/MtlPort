@@ -16,4 +16,8 @@ export class ContainersService {
   async findByBoatId(boatId: Boat['id']): Promise<Container[]> {
     return containers.filter(c => c.boat?.id === boatId);
   }
+
+  async hasSupplyType(container:Container, supplyType: string) : Promise<boolean> {
+    return !!container.content.find(supply => supply.correctedType === supplyType);
+  }
 }

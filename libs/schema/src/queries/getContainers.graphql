@@ -1,6 +1,17 @@
 query GetContainer {
   containers {
     id
-    content
+    content {
+      declaredType
+      correctedType
+      probability
+    }
+    boat {
+      id
+      name
+    }
+    hasFood
+    hasMedical
+    timeToLoad
   }
 }

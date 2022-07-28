@@ -19,5 +19,5 @@ export class Boat {
   transitStatus?: string;
 
   @Field( { nullable: true })
-  timeOfArrival?: string;
+  timeOfArrival?: number;
 }

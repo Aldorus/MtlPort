@@ -6,7 +6,7 @@ import * as fs from "fs";
 console.log('Hello');
 
 // Create Boats
-const boats = new Array(randNumber({ min: 2, max: 4 }))
+const boats = new Array(randNumber({ min: 4, max: 5 }))
   .fill({})
   .map(createBoat);
 fs.writeFile('./apps/api/data/boats.json', JSON.stringify(boats), 'utf8', () => {});
@@ -19,5 +19,5 @@ const containers = boats.reduce((acc, boat) => {
       .fill({})
       .map(() => createContainer({ boat })),
   ];
-}, new Array(randNumber({ min: 10, max: 35 })).fill({}).map(createContainer));
+}, new Array(randNumber({ min: 1000, max: 3500 })).fill({}).map(createContainer));
 fs.writeFile('./apps/api/data/containers.json', JSON.stringify(containers), 'utf8', () => {});

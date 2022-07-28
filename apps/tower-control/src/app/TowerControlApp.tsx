@@ -8,7 +8,7 @@ export const TowerControlApp = () => {
   return (
     <Routes>
       <Route index element={<DashboardPage />} />
-      <Route path="/boat/:boatId" element={<BoatPagePage />} />
+      <Route path="/boat/:boatId/:boatName" element={<BoatPagePage />} />
     </Routes>
   );
 };

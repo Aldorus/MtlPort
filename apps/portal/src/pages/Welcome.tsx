@@ -1,5 +1,6 @@
 import React from 'react';
 import { BEMClassName } from '@mtlport/react-lib';
+import './_Welcome.scss';
 
 export type WelcomeProps = React.HTMLProps<HTMLDivElement>;
 export const Welcome: React.FC<WelcomeProps> = ({ ...props }) => {
@@ -10,7 +11,7 @@ export const Welcome: React.FC<WelcomeProps> = ({ ...props }) => {
       {...props}
       className={namespace.blocksNames()}
     >
-      Hello
+      Welcome to the Montreal port
     </article>
   );
 };

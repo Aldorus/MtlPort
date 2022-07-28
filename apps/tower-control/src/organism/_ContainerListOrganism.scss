@@ -1,0 +1,7 @@
+.ContainerListOrganism {
+  &__item {
+    display: grid;
+    gap: var(--space-4x);
+    grid-template-columns: auto 1fr auto auto;
+  }
+}

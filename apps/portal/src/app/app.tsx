@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { Link, Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import './app.module.scss';
 import { Welcome } from '../pages/Welcome';
 import { Menu } from 'antd';
-import { Button } from '@mtlport/design-system';
 
 const Admin = React.lazy(() => import('admin/Module'));
 

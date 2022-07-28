@@ -24,7 +24,7 @@ export type Boat = {
   containers?: Maybe<Array<Container>>;
   id: Scalars['ID'];
   name: Scalars['String'];
-  timeOfArrival?: Maybe<Scalars['String']>;
+  timeOfArrival?: Maybe<Scalars['Float']>;
   transitStatus?: Maybe<Scalars['String']>;
 };
 
@@ -32,8 +32,11 @@ export type Boat = {
 export type Container = {
   __typename?: 'Container';
   boat?: Maybe<Boat>;
-  content: Scalars['String'];
+  content: Array<Supply>;
+  hasFood: Scalars['Boolean'];
+  hasMedical: Scalars['Boolean'];
   id: Scalars['ID'];
+  timeToLoad: Scalars['Float'];
 };
 
 export type Query = {
@@ -52,6 +55,14 @@ export type QueryBoatArgs = {
 
 export type QueryContainerArgs = {
   id: Scalars['String'];
+};
+
+/** supply */
+export type Supply = {
+  __typename?: 'Supply';
+  correctedType: Scalars['String'];
+  declaredType: Scalars['String'];
+  probability: Scalars['Float'];
 };
 
 
@@ -130,6 +141,7 @@ export type ResolversTypes = {
   ID: ResolverTypeWrapper<Scalars['ID']>;
   Query: ResolverTypeWrapper<{}>;
   String: ResolverTypeWrapper<Scalars['String']>;
+  Supply: ResolverTypeWrapper<Supply>;
 };
 
 /** Mapping between all available schema types and the resolvers parents */
@@ -141,6 +153,7 @@ export type ResolversParentTypes = {
   ID: Scalars['ID'];
   Query: {};
   String: Scalars['String'];
+  Supply: Supply;
 };
 
 export type UpperDirectiveArgs = { };
@@ -152,15 +165,18 @@ export type BoatResolvers<ContextType = any, ParentType extends ResolversParentT
   containers?: Resolver<Maybe<Array<ResolversTypes['Container']>>, ParentType, ContextType>;
   id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   name?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
-  timeOfArrival?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  timeOfArrival?: Resolver<Maybe<ResolversTypes['Float']>, ParentType, ContextType>;
   transitStatus?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
 export type ContainerResolvers<ContextType = any, ParentType extends ResolversParentTypes['Container'] = ResolversParentTypes['Container']> = {
   boat?: Resolver<Maybe<ResolversTypes['Boat']>, ParentType, ContextType>;
-  content?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  content?: Resolver<Array<ResolversTypes['Supply']>, ParentType, ContextType>;
+  hasFood?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
+  hasMedical?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
   id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
+  timeToLoad?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
@@ -171,10 +187,18 @@ export type QueryResolvers<ContextType = any, ParentType extends ResolversParent
   containers?: Resolver<Array<ResolversTypes['Container']>, ParentType, ContextType>;
 };
 
+export type SupplyResolvers<ContextType = any, ParentType extends ResolversParentTypes['Supply'] = ResolversParentTypes['Supply']> = {
+  correctedType?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  declaredType?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  probability?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
 export type Resolvers<ContextType = any> = {
   Boat?: BoatResolvers<ContextType>;
   Container?: ContainerResolvers<ContextType>;
   Query?: QueryResolvers<ContextType>;
+  Supply?: SupplyResolvers<ContextType>;
 };
 
 export type DirectiveResolvers<ContextType = any> = {
@@ -184,12 +208,12 @@ export type DirectiveResolvers<ContextType = any> = {
 export type GetBoatsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetBoatsQuery = { __typename?: 'Query', boats: Array<{ __typename?: 'Boat', id: string, name: string, containerCount?: number | null, transitStatus?: string | null, timeOfArrival?: string | null }> };
+export type GetBoatsQuery = { __typename?: 'Query', boats: Array<{ __typename?: 'Boat', id: string, name: string, containerCount?: number | null, transitStatus?: string | null, timeOfArrival?: number | null }> };
 
 export type GetContainerQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetContainerQuery = { __typename?: 'Query', containers: Array<{ __typename?: 'Container', id: string, content: string }> };
+export type GetContainerQuery = { __typename?: 'Query', containers: Array<{ __typename?: 'Container', id: string, hasFood: boolean, hasMedical: boolean, timeToLoad: number, content: Array<{ __typename?: 'Supply', declaredType: string, correctedType: string, probability: number }>, boat?: { __typename?: 'Boat', id: string, name: string } | null }> };
 
 
 export const GetBoatsDocument = gql`
@@ -234,7 +258,18 @@ export const GetContainerDocument = gql`
     query GetContainer {
   containers {
     id
-    content
+    content {
+      declaredType
+      correctedType
+      probability
+    }
+    boat {
+      id
+      name
+    }
+    hasFood
+    hasMedical
+    timeToLoad
   }
 }
     `;

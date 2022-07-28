@@ -5374,6 +5374,11 @@ arr-union@^3.1.0:
   resolved "https://npm.turbulent.ca/arr-union/-/arr-union-3.1.0.tgz"
   integrity sha1-45sJrqne+Gao8gbiiK9jkZuuOcQ=
 
+array-back@^5.0.0:
+  version "5.0.0"
+  resolved "https://npm.turbulent.ca/array-back/-/array-back-5.0.0.tgz#e196609edcec48376236d163958df76e659a0d36"
+  integrity sha512-kgVWwJReZWmVuWOQKEOohXKJX+nD02JAZ54D1RRWlv8L0NebauKAaFxACKzB74RTclt1+WNz5KHaLRDAPZbDEw==
+
 array-find-index@^1.0.1:
   version "1.0.2"
   resolved "https://npm.turbulent.ca/array-find-index/-/array-find-index-1.0.2.tgz"
@@ -8736,6 +8741,11 @@ fast-safe-stringify@2.1.1:
   resolved "https://npm.turbulent.ca/fast-safe-stringify/-/fast-safe-stringify-2.1.1.tgz"
   integrity sha512-W+KJc2dmILlPplD/H4K9l9LcAHAfPtP6BY84uVLXQ6Evcz9Lcg33Y2z1IVblT6xdY54PXYVHEv+0Wpq8Io6zkA==
 
+fast-sort@^3.2.0:
+  version "3.2.0"
+  resolved "https://npm.turbulent.ca/fast-sort/-/fast-sort-3.2.0.tgz#9339d88953fad70ba82a404dc50be0ecc5f9db87"
+  integrity sha512-EgQtkmWo2Icq6uei57fTrZAKayL9b4OISU1613737AuLcIbAZ57tcOtGaK2A7zO54kk97wOnSw6INDA++rjMAQ==
+
 fastq@^1.6.0:
   version "1.13.0"
   resolved "https://npm.turbulent.ca/fastq/-/fastq-1.13.0.tgz"
@@ -11511,7 +11521,7 @@ kind-of@^4.0.0:
 
 kind-of@^5.0.0:
   version "5.1.0"
-  resolved "https://npm.turbulent.ca/kind-of/-/kind-of-5.1.0.tgz"
+  resolved "https://npm.turbulent.ca/kind-of/-/kind-of-5.1.0.tgz#729c91e2d857b7a419a1f9aa65685c4c33f5845d"
   integrity sha512-NGEErnH6F2vUuXDh+OlbcKW7/wOcfdRHaZ7VWtqCztfHri/++YKmP51OdWeGPuqCOba6kk2OTe5d02VmTB80Pw==
 
 kind-of@^6.0.0, kind-of@^6.0.2:
@@ -15569,6 +15579,19 @@ sockjs@^0.3.24:
     uuid "^8.3.2"
     websocket-driver "^0.7.4"
 
+sort-array@4.1.5:
+  version "4.1.5"
+  resolved "https://npm.turbulent.ca/sort-array/-/sort-array-4.1.5.tgz#64b92aaba222aec606786f4df28ae4e3e3e68313"
+  integrity sha512-Ya4peoS1fgFN42RN1REk2FgdNOeLIEMKFGJvs7VTP3OklF8+kl2SkpVliZ4tk/PurWsrWRsdNdU+tgyOBkB9sA==
+  dependencies:
+    array-back "^5.0.0"
+    typical "^6.0.1"
+
+sort-es@^1.5.1:
+  version "1.5.1"
+  resolved "https://npm.turbulent.ca/sort-es/-/sort-es-1.5.1.tgz#17968e666d708708c814eafaa98b29d0583b7a8e"
+  integrity sha512-8HL8OFN8EwbwDSEublYEelKFYHsAoBUcQYtLEt4sSQbjtFU4+YDtahJr73wkS0RC5KeSrDy8m+54KoJO4vMYLg==
+
 source-list-map@^2.0.0:
   version "2.0.1"
   resolved "https://npm.turbulent.ca/source-list-map/-/source-list-map-2.0.1.tgz"
@@ -16680,6 +16703,11 @@ typescript@~4.7.2:
   version "4.7.4"
   resolved "https://npm.turbulent.ca/typescript/-/typescript-4.7.4.tgz"
   integrity sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==
+
+typical@^6.0.1:
+  version "6.0.1"
+  resolved "https://npm.turbulent.ca/typical/-/typical-6.0.1.tgz#89bd1a6aa5e5e96fa907fb6b7579223bff558a06"
+  integrity sha512-+g3NEp7fJLe9DPa1TArHm9QAA7YciZmWnfAqEaFrBihQ7epOv9i99rjtgb6Iz0wh3WuQDjsCTDfgRoGnmHN81A==
 
 ua-parser-js@^0.7.30:
   version "0.7.31"

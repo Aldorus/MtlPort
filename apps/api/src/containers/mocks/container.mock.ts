@@ -1,9 +1,65 @@
-import { randUuid, randFullName, randPost } from '@ngneat/falso';
-import { Container } from '../models/container.model';
+import { rand, randNumber, randUuid } from '@ngneat/falso';
+import { Container, Supply } from '../models/container.model';
+
+const createSupply = (): Supply => ({
+  declaredType: rand([
+    'food',
+    'medical',
+    'electronic',
+    'toy',
+    'electronic',
+    'toy',
+    'electronic',
+    'toy',
+    'electronic',
+    'toy',
+    'electronic',
+    'toy',
+    'electronic',
+    'toy',
+    'electronic',
+    'toy',
+    'electronic',
+    'toy',
+    'electronic',
+    'toy',
+    'electronic',
+    'toy',
+  ]),
+  correctedType: rand([
+    'food',
+    'medical',
+    'electronic',
+    'toy',
+    'electronic',
+    'toy',
+    'electronic',
+    'toy',
+    'electronic',
+    'toy',
+    'electronic',
+    'toy',
+    'electronic',
+    'toy',
+    'electronic',
+    'toy',
+    'electronic',
+    'toy',
+    'electronic',
+    'toy',
+    'electronic',
+    'toy',
+    'electronic',
+    'toy',
+    'electronic',
+    'toy',
+  ]),
+  probability: randNumber({ min: 85, max: 100 }),
+});
 
 export const createContainer = (props: Partial<Container> = {}): Container => ({
   id: randUuid(),
-  content: 'toto',
+  content: new Array(randNumber({ min: 1, max: 5 })).fill({}).map(createSupply),
+  timeToLoad: randNumber({ min: 1, max: 4 }),
   ...props,
 });
-

@@ -4,11 +4,21 @@
 
 directive @upper on FIELD_DEFINITION
 
+"""supply"""
+type Supply {
+  declaredType: String!
+  correctedType: String!
+  probability: Float!
+}
+
 """container"""
 type Container {
   id: ID!
-  content: String!
+  content: [Supply!]!
   boat: Boat
+  hasFood: Boolean!
+  hasMedical: Boolean!
+  timeToLoad: Float!
 }
 
 """boat"""
@@ -18,7 +28,7 @@ type Boat {
   containers: [Container!]
   containerCount: Float
   transitStatus: String
-  timeOfArrival: String
+  timeOfArrival: Float
 }
 
 type Query {

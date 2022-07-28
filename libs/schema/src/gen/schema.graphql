@@ -6,15 +6,18 @@ type Boat {
   containers: [Container!]
   id: ID!
   name: String!
-  timeOfArrival: String
+  timeOfArrival: Float
   transitStatus: String
 }
 
 """container"""
 type Container {
   boat: Boat
-  content: String!
+  content: [Supply!]!
+  hasFood: Boolean!
+  hasMedical: Boolean!
   id: ID!
+  timeToLoad: Float!
 }
 
 type Query {
@@ -22,4 +25,11 @@ type Query {
   boats: [Boat!]!
   container(id: String!): Container!
   containers: [Container!]!
+}
+
+"""supply"""
+type Supply {
+  correctedType: String!
+  declaredType: String!
+  probability: Float!
 }
