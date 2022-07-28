@@ -10,11 +10,8 @@ const TowerControl = React.lazy(() => import('tower-control/Module'));
 
 const items = [
   { label: 'Home', key: '/' },
+  { label: 'Tower Control', key: '/tower-control' },
   { label: 'Admin', key: '/admin' },
-  {
-    label: 'Tower Control',
-    key: '/tower-control',
-  },
 ];
 
 export function App() {
@@ -29,8 +26,8 @@ export function App() {
       <Menu items={items} mode="horizontal" onClick={handleMenuChange} />
       <Routes>
         <Route path="/" element={<Welcome />} />
-        <Route path="/admin" element={<Admin />} />
         <Route path="/tower-control/*" element={<TowerControl />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </React.Suspense>
   );
