@@ -1,0 +1,38 @@
+version: '3.9'
+services:
+  front:
+    image: node:16
+    working_dir: /home/node/app
+    command: sh -c "nx serve portal --devRemotes=admin,tower-control"
+    ports:
+      - '4200:4200'
+    depends_on:
+      node-modules:
+        condition: service_completed_successfully
+    volumes:
+      - ./:/home/node/app
+    profiles:
+      - install
+      - serve
+
+  back:
+    image: node:16
+    working_dir: /home/node/app
+    command: sh -c "nx serve api"
+    depends_on:
+      node-modules:
+        condition: service_completed_successfully
+    volumes:
+      - ./:/home/node/app
+    profiles:
+      - install
+      - serve
+
+  node-modules:
+    image: node:16
+    working_dir: /home/node/app
+    command: sh -c "yarn install --frozen-lockfile"
+    volumes:
+      - ./:/home/node/app
+    profiles:
+      - install
