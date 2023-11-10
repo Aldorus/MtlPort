@@ -31,9 +31,23 @@ type Boat {
   timeOfArrival: Float
 }
 
+"""notification"""
+type Notification {
+  id: ID!
+  content: String!
+}
+
 type Query {
   boat(id: String!): Boat!
   boats: [Boat!]!
   container(id: String!): Container!
   containers: [Container!]!
+}
+
+type Mutation {
+  sendNotification(content: String!): Notification!
+}
+
+type Subscription {
+  notificationAdded: Notification!
 }

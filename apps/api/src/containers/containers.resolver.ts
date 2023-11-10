@@ -2,13 +2,12 @@ import { NotFoundException } from '@nestjs/common';
 import { Args, Parent, Query, ResolveField, Resolver } from '@nestjs/graphql';
 import { Container } from './models/container.model';
 import { ContainersService } from './containers.service';
-import { Boat } from '../boats/models/boat.model';
 
-@Resolver((of) => Container)
+@Resolver(() => Container)
 export class ContainersResolver {
   constructor(private readonly containersService: ContainersService) {}
 
-  @Query((returns) => Container)
+  @Query(() => Container)
   async container(@Args('id') id: string): Promise<Container> {
     const container = await this.containersService.findOneById(id);
     if (!container) {
@@ -17,7 +16,7 @@ export class ContainersResolver {
     return container;
   }
 
-  @Query((returns) => [Container])
+  @Query(() => [Container])
   containers(): Promise<Container[]> {
     return this.containersService.findAll();
   }

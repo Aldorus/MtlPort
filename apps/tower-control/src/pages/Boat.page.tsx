@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, Typography } from 'antd';
+import { Typography } from 'antd';
 import { BEMClassName } from '@mtlport/react-lib';
 import { useParams } from 'react-router-dom';
 import { Container, useGetContainerQuery } from '@mtlport/schema';

@@ -1,0 +1,6 @@
+mutation AddNotification($content: String!) {
+  sendNotification(content: $content) {
+    id
+    content
+  }
+}

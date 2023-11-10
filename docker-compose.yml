@@ -1,6 +1,16 @@
-version: '3.9'
+version: "3.9"
 services:
+  node-modules:
+    image: node:16
+    working_dir: /home/node/app
+    command: sh -c "yarn install --frozen-lockfile"
+    volumes:
+      - ./:/home/node/app
+    profiles:
+      - install
+
   front:
+    hostname: localhost
     image: node:16
     working_dir: /home/node/app
     command: sh -c "yarn run start portal --devRemotes=admin,tower-control"
@@ -27,12 +37,3 @@ services:
     profiles:
       - install
       - serve
-
-  node-modules:
-    image: node:16
-    working_dir: /home/node/app
-    command: sh -c "yarn install --frozen-lockfile"
-    volumes:
-      - ./:/home/node/app
-    profiles:
-      - install

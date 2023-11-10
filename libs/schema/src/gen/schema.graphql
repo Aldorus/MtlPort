@@ -20,11 +20,25 @@ type Container {
   timeToLoad: Float!
 }
 
+type Mutation {
+  sendNotification(content: String!): Notification!
+}
+
+"""notification"""
+type Notification {
+  content: String!
+  id: ID!
+}
+
 type Query {
   boat(id: String!): Boat!
   boats: [Boat!]!
   container(id: String!): Container!
   containers: [Container!]!
+}
+
+type Subscription {
+  notificationAdded: Notification!
 }
 
 """supply"""

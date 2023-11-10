@@ -39,6 +39,23 @@ export type Container = {
   timeToLoad: Scalars['Float'];
 };
 
+export type Mutation = {
+  __typename?: 'Mutation';
+  sendNotification: Notification;
+};
+
+
+export type MutationSendNotificationArgs = {
+  content: Scalars['String'];
+};
+
+/** notification */
+export type Notification = {
+  __typename?: 'Notification';
+  content: Scalars['String'];
+  id: Scalars['ID'];
+};
+
 export type Query = {
   __typename?: 'Query';
   boat: Boat;
@@ -55,6 +72,11 @@ export type QueryBoatArgs = {
 
 export type QueryContainerArgs = {
   id: Scalars['String'];
+};
+
+export type Subscription = {
+  __typename?: 'Subscription';
+  notificationAdded: Notification;
 };
 
 /** supply */
@@ -139,8 +161,11 @@ export type ResolversTypes = {
   Container: ResolverTypeWrapper<Container>;
   Float: ResolverTypeWrapper<Scalars['Float']>;
   ID: ResolverTypeWrapper<Scalars['ID']>;
+  Mutation: ResolverTypeWrapper<{}>;
+  Notification: ResolverTypeWrapper<Notification>;
   Query: ResolverTypeWrapper<{}>;
   String: ResolverTypeWrapper<Scalars['String']>;
+  Subscription: ResolverTypeWrapper<{}>;
   Supply: ResolverTypeWrapper<Supply>;
 };
 
@@ -151,8 +176,11 @@ export type ResolversParentTypes = {
   Container: Container;
   Float: Scalars['Float'];
   ID: Scalars['ID'];
+  Mutation: {};
+  Notification: Notification;
   Query: {};
   String: Scalars['String'];
+  Subscription: {};
   Supply: Supply;
 };
 
@@ -180,11 +208,25 @@ export type ContainerResolvers<ContextType = any, ParentType extends ResolversPa
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
+export type MutationResolvers<ContextType = any, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = {
+  sendNotification?: Resolver<ResolversTypes['Notification'], ParentType, ContextType, RequireFields<MutationSendNotificationArgs, 'content'>>;
+};
+
+export type NotificationResolvers<ContextType = any, ParentType extends ResolversParentTypes['Notification'] = ResolversParentTypes['Notification']> = {
+  content?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
 export type QueryResolvers<ContextType = any, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
   boat?: Resolver<ResolversTypes['Boat'], ParentType, ContextType, RequireFields<QueryBoatArgs, 'id'>>;
   boats?: Resolver<Array<ResolversTypes['Boat']>, ParentType, ContextType>;
   container?: Resolver<ResolversTypes['Container'], ParentType, ContextType, RequireFields<QueryContainerArgs, 'id'>>;
   containers?: Resolver<Array<ResolversTypes['Container']>, ParentType, ContextType>;
+};
+
+export type SubscriptionResolvers<ContextType = any, ParentType extends ResolversParentTypes['Subscription'] = ResolversParentTypes['Subscription']> = {
+  notificationAdded?: SubscriptionResolver<ResolversTypes['Notification'], "notificationAdded", ParentType, ContextType>;
 };
 
 export type SupplyResolvers<ContextType = any, ParentType extends ResolversParentTypes['Supply'] = ResolversParentTypes['Supply']> = {
@@ -197,13 +239,23 @@ export type SupplyResolvers<ContextType = any, ParentType extends ResolversParen
 export type Resolvers<ContextType = any> = {
   Boat?: BoatResolvers<ContextType>;
   Container?: ContainerResolvers<ContextType>;
+  Mutation?: MutationResolvers<ContextType>;
+  Notification?: NotificationResolvers<ContextType>;
   Query?: QueryResolvers<ContextType>;
+  Subscription?: SubscriptionResolvers<ContextType>;
   Supply?: SupplyResolvers<ContextType>;
 };
 
 export type DirectiveResolvers<ContextType = any> = {
   upper?: UpperDirectiveResolver<any, any, ContextType>;
 };
+
+export type AddNotificationMutationVariables = Exact<{
+  content: Scalars['String'];
+}>;
+
+
+export type AddNotificationMutation = { __typename?: 'Mutation', sendNotification: { __typename?: 'Notification', id: string, content: string } };
 
 export type GetBoatsQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -215,7 +267,46 @@ export type GetContainerQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type GetContainerQuery = { __typename?: 'Query', containers: Array<{ __typename?: 'Container', id: string, hasFood: boolean, hasMedical: boolean, timeToLoad: number, content: Array<{ __typename?: 'Supply', declaredType: string, correctedType: string, probability: number }>, boat?: { __typename?: 'Boat', id: string, name: string } | null }> };
 
+export type NotificationsSubSubscriptionVariables = Exact<{ [key: string]: never; }>;
 
+
+export type NotificationsSubSubscription = { __typename?: 'Subscription', notificationAdded: { __typename?: 'Notification', id: string, content: string } };
+
+
+export const AddNotificationDocument = gql`
+    mutation AddNotification($content: String!) {
+  sendNotification(content: $content) {
+    id
+    content
+  }
+}
+    `;
+export type AddNotificationMutationFn = Apollo.MutationFunction<AddNotificationMutation, AddNotificationMutationVariables>;
+
+/**
+ * __useAddNotificationMutation__
+ *
+ * To run a mutation, you first call `useAddNotificationMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useAddNotificationMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [addNotificationMutation, { data, loading, error }] = useAddNotificationMutation({
+ *   variables: {
+ *      content: // value for 'content'
+ *   },
+ * });
+ */
+export function useAddNotificationMutation(baseOptions?: Apollo.MutationHookOptions<AddNotificationMutation, AddNotificationMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<AddNotificationMutation, AddNotificationMutationVariables>(AddNotificationDocument, options);
+      }
+export type AddNotificationMutationHookResult = ReturnType<typeof useAddNotificationMutation>;
+export type AddNotificationMutationResult = Apollo.MutationResult<AddNotificationMutation>;
+export type AddNotificationMutationOptions = Apollo.BaseMutationOptions<AddNotificationMutation, AddNotificationMutationVariables>;
 export const GetBoatsDocument = gql`
     query GetBoats {
   boats {
@@ -300,3 +391,33 @@ export function useGetContainerLazyQuery(baseOptions?: Apollo.LazyQueryHookOptio
 export type GetContainerQueryHookResult = ReturnType<typeof useGetContainerQuery>;
 export type GetContainerLazyQueryHookResult = ReturnType<typeof useGetContainerLazyQuery>;
 export type GetContainerQueryResult = Apollo.QueryResult<GetContainerQuery, GetContainerQueryVariables>;
+export const NotificationsSubDocument = gql`
+    subscription NotificationsSub {
+  notificationAdded {
+    id
+    content
+  }
+}
+    `;
+
+/**
+ * __useNotificationsSubSubscription__
+ *
+ * To run a query within a React component, call `useNotificationsSubSubscription` and pass it any options that fit your needs.
+ * When your component renders, `useNotificationsSubSubscription` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the subscription, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useNotificationsSubSubscription({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useNotificationsSubSubscription(baseOptions?: Apollo.SubscriptionHookOptions<NotificationsSubSubscription, NotificationsSubSubscriptionVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useSubscription<NotificationsSubSubscription, NotificationsSubSubscriptionVariables>(NotificationsSubDocument, options);
+      }
+export type NotificationsSubSubscriptionHookResult = ReturnType<typeof useNotificationsSubSubscription>;
+export type NotificationsSubSubscriptionResult = Apollo.SubscriptionResult<NotificationsSubSubscription>;
