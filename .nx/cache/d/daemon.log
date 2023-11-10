@@ -1,0 +1,160 @@
+[NX Daemon Server] - 2023-11-10T16:35:09.313Z - Started listening on: /var/folders/5l/tjwmcgfj4zb7vswrc2yb67fw0000gq/T/7b20d7512d0a93154e16/d.sock
+[NX Daemon Server] - 2023-11-10T16:35:09.317Z - [WATCHER]: Subscribed to changes within: /Users/gulrou/Project/MtlPort (native)
+[NX Daemon Server] - 2023-11-10T16:35:09.318Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-11-10T16:35:09.318Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2023-11-10T16:35:09.321Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-11-10T16:35:09.699Z - [REQUEST]: Updated file-hasher based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-11-10T16:35:09.699Z - [REQUEST]: 
+[NX Daemon Server] - 2023-11-10T16:35:09.699Z - [REQUEST]: 
+[NX Daemon Server] - 2023-11-10T16:35:09.800Z - Started listening on: /var/folders/5l/tjwmcgfj4zb7vswrc2yb67fw0000gq/T/7b20d7512d0a93154e16/d.sock
+[NX Daemon Server] - 2023-11-10T16:35:09.802Z - [WATCHER]: Subscribed to changes within: /Users/gulrou/Project/MtlPort (native)
+
+ >  NX   Using `implicitDependencies` for global implicit dependencies configuration is no longer supported.
+
+   Use "namedInputs" instead. You can run "nx repair" to automatically migrate your configuration.
+   For more information about the usage of "namedInputs" see https://nx.dev/deprecated/global-implicit-dependencies#global-implicit-dependencies
+
+[NX Daemon Server] - 2023-11-10T16:35:09.999Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-11-10T16:35:10.002Z - Time taken for 'total for creating and serializing project graph' 678.1915419101715ms
+[NX Daemon Server] - 2023-11-10T16:35:10.002Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-11-10T16:35:10.002Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2023-11-10T16:35:10.002Z - Established a connection. Number of open connections: 3
+[NX Daemon Server] - 2023-11-10T16:35:10.004Z - [WATCHER]: .nx/cache/d/server-process.json was created or restored
+[NX Daemon Server] - 2023-11-10T16:35:10.005Z - [WATCHER]: Stopping the watcher for /Users/gulrou/Project/MtlPort (sources)
+[NX Daemon Server] - 2023-11-10T16:35:10.006Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-11-10T16:35:10.016Z - [REQUEST]: Updated file-hasher based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-11-10T16:35:10.016Z - [REQUEST]: .nx/cache/d/server-process.json
+[NX Daemon Server] - 2023-11-10T16:35:10.016Z - [REQUEST]: 
+
+ >  NX   Using `implicitDependencies` for global implicit dependencies configuration is no longer supported.
+
+   Use "namedInputs" instead. You can run "nx repair" to automatically migrate your configuration.
+   For more information about the usage of "namedInputs" see https://nx.dev/deprecated/global-implicit-dependencies#global-implicit-dependencies
+
+[NX Daemon Server] - 2023-11-10T16:35:10.048Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-11-10T16:35:10.050Z - Time taken for 'total for creating and serializing project graph' 42.80204105377197ms
+[NX Daemon Server] - 2023-11-10T16:35:10.050Z - Closed a connection. Number of open connections: 2
+[NX Daemon Server] - 2023-11-10T16:35:10.050Z - [WATCHER]: Stopping the watcher for /Users/gulrou/Project/MtlPort (outputs)
+[NX Daemon Server] - 2023-11-10T16:35:10.050Z - Server stopped because: "this process is no longer the current daemon (native)"
+[NX Daemon Server] - 2023-11-10T16:35:28.807Z - Started listening on: /var/folders/5l/tjwmcgfj4zb7vswrc2yb67fw0000gq/T/7b20d7512d0a93154e16/d.sock
+[NX Daemon Server] - 2023-11-10T16:35:28.809Z - [WATCHER]: Subscribed to changes within: /Users/gulrou/Project/MtlPort (native)
+[NX Daemon Server] - 2023-11-10T16:35:28.810Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-11-10T16:35:28.810Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2023-11-10T16:35:28.812Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-11-10T16:35:28.850Z - [REQUEST]: Updated file-hasher based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-11-10T16:35:28.850Z - [REQUEST]: 
+[NX Daemon Server] - 2023-11-10T16:35:28.850Z - [REQUEST]: 
+
+ >  NX   Using `implicitDependencies` for global implicit dependencies configuration is no longer supported.
+
+   Use "namedInputs" instead. You can run "nx repair" to automatically migrate your configuration.
+   For more information about the usage of "namedInputs" see https://nx.dev/deprecated/global-implicit-dependencies#global-implicit-dependencies
+
+[NX Daemon Server] - 2023-11-10T16:35:28.901Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-11-10T16:35:28.903Z - Time taken for 'total for creating and serializing project graph' 88.55783295631409ms
+[NX Daemon Server] - 2023-11-10T16:35:28.903Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-11-10T16:35:28.908Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-11-10T16:35:28.908Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 89. Response time: 7.
+[NX Daemon Server] - 2023-11-10T16:35:28.957Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-11-10T16:35:28.963Z - [WATCHER]: .nx/cache/d/server-process.json was modified
+[NX Daemon Server] - 2023-11-10T16:35:28.963Z - [WATCHER]: Stopping the watcher for /Users/gulrou/Project/MtlPort (sources)
+[NX Daemon Server] - 2023-11-10T16:35:28.963Z - [WATCHER]: Stopping the watcher for /Users/gulrou/Project/MtlPort (outputs)
+[NX Daemon Server] - 2023-11-10T16:35:28.963Z - Server stopped because: "this process is no longer the current daemon (native)"
+[NX Daemon Server] - 2023-11-10T16:36:44.865Z - [WATCHER]: workspace.json was modified
+[NX Daemon Server] - 2023-11-10T16:36:44.867Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-11-10T16:36:44.957Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-11-10T16:36:45.002Z - [REQUEST]: Updated file-hasher based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-11-10T16:36:45.002Z - [REQUEST]: workspace.json
+[NX Daemon Server] - 2023-11-10T16:36:45.002Z - [REQUEST]: 
+
+ >  NX   Using `implicitDependencies` for global implicit dependencies configuration is no longer supported.
+
+   Use "namedInputs" instead. You can run "nx repair" to automatically migrate your configuration.
+   For more information about the usage of "namedInputs" see https://nx.dev/deprecated/global-implicit-dependencies#global-implicit-dependencies
+
+[NX Daemon Server] - 2023-11-10T16:36:45.061Z - Time taken for 'hash changed files from watcher' 0.49695897102355957ms
+[NX Daemon Server] - 2023-11-10T16:36:49.366Z - Started listening on: /var/folders/5l/tjwmcgfj4zb7vswrc2yb67fw0000gq/T/7b20d7512d0a93154e16/d.sock
+[NX Daemon Server] - 2023-11-10T16:36:49.368Z - [WATCHER]: Subscribed to changes within: /Users/gulrou/Project/MtlPort (native)
+[NX Daemon Server] - 2023-11-10T16:36:49.375Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-11-10T16:36:49.375Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2023-11-10T16:36:49.377Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-11-10T16:36:49.412Z - [REQUEST]: Updated file-hasher based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-11-10T16:36:49.412Z - [REQUEST]: 
+[NX Daemon Server] - 2023-11-10T16:36:49.412Z - [REQUEST]: 
+[NX Daemon Server] - 2023-11-10T16:36:49.429Z - [WATCHER]: .nx/cache/d/server-process.json was modified
+[NX Daemon Server] - 2023-11-10T16:36:49.429Z - [WATCHER]: Stopping the watcher for /Users/gulrou/Project/MtlPort (sources)
+[NX Daemon Server] - 2023-11-10T16:36:49.429Z - [WATCHER]: Stopping the watcher for /Users/gulrou/Project/MtlPort (outputs)
+[NX Daemon Server] - 2023-11-10T16:36:49.429Z - Server stopped because: "this process is no longer the current daemon (native)"
+
+ >  NX   Using `implicitDependencies` for global implicit dependencies configuration is no longer supported.
+
+   Use "namedInputs" instead. You can run "nx repair" to automatically migrate your configuration.
+   For more information about the usage of "namedInputs" see https://nx.dev/deprecated/global-implicit-dependencies#global-implicit-dependencies
+
+[NX Daemon Server] - 2023-11-10T16:36:49.461Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-11-10T16:36:49.463Z - Time taken for 'total for creating and serializing project graph' 84.15787482261658ms
+[NX Daemon Server] - 2023-11-10T16:36:49.463Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-11-10T16:36:49.468Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-11-10T16:36:49.468Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 84. Response time: 7.
+[NX Daemon Server] - 2023-11-10T16:36:49.506Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-11-10T16:36:58.133Z - [WATCHER]: workspace.json was modified
+[NX Daemon Server] - 2023-11-10T16:36:58.135Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-11-10T16:36:58.199Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-11-10T16:36:58.295Z - [REQUEST]: Updated file-hasher based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-11-10T16:36:58.295Z - [REQUEST]: workspace.json
+[NX Daemon Server] - 2023-11-10T16:36:58.296Z - [REQUEST]: 
+
+ >  NX   Using `implicitDependencies` for global implicit dependencies configuration is no longer supported.
+
+   Use "namedInputs" instead. You can run "nx repair" to automatically migrate your configuration.
+   For more information about the usage of "namedInputs" see https://nx.dev/deprecated/global-implicit-dependencies#global-implicit-dependencies
+
+[NX Daemon Server] - 2023-11-10T16:36:58.344Z - Time taken for 'hash changed files from watcher' 0.9977078437805176ms
+[NX Daemon Server] - 2023-11-10T16:37:36.746Z - Started listening on: /var/folders/5l/tjwmcgfj4zb7vswrc2yb67fw0000gq/T/7b20d7512d0a93154e16/d.sock
+[NX Daemon Server] - 2023-11-10T16:37:36.747Z - [WATCHER]: Subscribed to changes within: /Users/gulrou/Project/MtlPort (native)
+[NX Daemon Server] - 2023-11-10T16:37:36.750Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-11-10T16:37:36.751Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2023-11-10T16:37:36.752Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-11-10T16:37:36.753Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-11-10T16:37:36.789Z - [REQUEST]: Updated file-hasher based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-11-10T16:37:36.789Z - [REQUEST]: 
+[NX Daemon Server] - 2023-11-10T16:37:36.789Z - [REQUEST]: 
+
+ >  NX   Using `implicitDependencies` for global implicit dependencies configuration is no longer supported.
+
+   Use "namedInputs" instead. You can run "nx repair" to automatically migrate your configuration.
+   For more information about the usage of "namedInputs" see https://nx.dev/deprecated/global-implicit-dependencies#global-implicit-dependencies
+
+[NX Daemon Server] - 2023-11-10T16:37:36.839Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-11-10T16:37:36.841Z - Time taken for 'total for creating and serializing project graph' 85.41779088973999ms
+[NX Daemon Server] - 2023-11-10T16:37:36.843Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-11-10T16:37:36.843Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 86. Response time: 4.
+[NX Daemon Server] - 2023-11-10T16:37:36.882Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-11-10T16:37:36.943Z - [WATCHER]: .nx/cache/d/server-process.json was modified
+[NX Daemon Server] - 2023-11-10T16:37:36.943Z - [WATCHER]: Stopping the watcher for /Users/gulrou/Project/MtlPort (sources)
+[NX Daemon Server] - 2023-11-10T16:37:36.944Z - [WATCHER]: Stopping the watcher for /Users/gulrou/Project/MtlPort (outputs)
+[NX Daemon Server] - 2023-11-10T16:37:36.944Z - Server stopped because: "this process is no longer the current daemon (native)"
+[NX Daemon Server] - 2023-11-10T16:37:44.079Z - Started listening on: /var/folders/5l/tjwmcgfj4zb7vswrc2yb67fw0000gq/T/7b20d7512d0a93154e16/d.sock
+[NX Daemon Server] - 2023-11-10T16:37:44.080Z - [WATCHER]: Subscribed to changes within: /Users/gulrou/Project/MtlPort (native)
+[NX Daemon Server] - 2023-11-10T16:37:44.083Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-11-10T16:37:44.084Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2023-11-10T16:37:44.084Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-11-10T16:37:44.086Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-11-10T16:37:44.121Z - [REQUEST]: Updated file-hasher based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-11-10T16:37:44.121Z - [REQUEST]: 
+[NX Daemon Server] - 2023-11-10T16:37:44.121Z - [REQUEST]: 
+[NX Daemon Server] - 2023-11-10T16:37:44.142Z - [WATCHER]: .nx/cache/d/server-process.json was modified
+
+[NX Daemon Server] - 2023-11-10T16:37:44.143Z - [WATCHER]: Stopping the watcher for /Users/gulrou/Project/MtlPort (sources)
+[NX Daemon Server] - 2023-11-10T16:37:44.143Z - [WATCHER]: Stopping the watcher for /Users/gulrou/Project/MtlPort (outputs)
+[NX Daemon Server] - 2023-11-10T16:37:44.143Z - Server stopped because: "this process is no longer the current daemon (native)"
+ >  NX   Using `implicitDependencies` for global implicit dependencies configuration is no longer supported.
+
+   Use "namedInputs" instead. You can run "nx repair" to automatically migrate your configuration.
+   For more information about the usage of "namedInputs" see https://nx.dev/deprecated/global-implicit-dependencies#global-implicit-dependencies
+
+[NX Daemon Server] - 2023-11-10T16:37:44.172Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-11-10T16:37:44.174Z - Time taken for 'total for creating and serializing project graph' 85.60020899772644ms
+[NX Daemon Server] - 2023-11-10T16:37:44.175Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-11-10T16:37:44.175Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 86. Response time: 3.
+[NX Daemon Server] - 2023-11-10T16:37:44.215Z - Closed a connection. Number of open connections: 0

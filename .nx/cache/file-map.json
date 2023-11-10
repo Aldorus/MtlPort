@@ -1,0 +1,1133 @@
+{
+  "version": "6.0",
+  "nxVersion": "17.1.1",
+  "deps": {
+    "@apollo/client": "^3.8.7",
+    "@graphql-codegen/typescript-resolvers": "^4.0.1",
+    "graphql-ws": "^5.14.2",
+    "@nestjs/apollo": "^12.0.10",
+    "@nestjs/common": "^10.2.8",
+    "@nestjs/core": "^10.2.8",
+    "@nestjs/graphql": "^12.0.10",
+    "@nestjs/platform-express": "^10.2.8",
+    "@tanstack/react-query": "^5.8.1",
+    "@types/graphql": "^14.5.0",
+    "antd": "^5.11.1",
+    "apollo-server-express": "^3.12.1",
+    "class-validator": "^0.14.0",
+    "core-js": "^3.33.2",
+    "graphql": "^16.8.1",
+    "graphql-subscriptions": "^2.0.0",
+    "graphql-tools": "^9.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.18.0",
+    "reflect-metadata": "^0.1.13",
+    "regenerator-runtime": "v0.14.0",
+    "rxjs": "^7.8.1",
+    "sort-es": "^1.7.3",
+    "fast-sort": "^3.4.0",
+    "tslib": "^2.6.2",
+    "sort-array": "^4.1.5",
+    "@babel/core": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/introspection": "^4.0.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-operations": "^4.0.1",
+    "@graphql-codegen/typescript-react-apollo": "^4.1.0",
+    "@graphql-codegen/typescript-react-query": "^4.1.0",
+    "@nestjs/schematics": "^10.0.3",
+    "@nestjs/testing": "^10.2.8",
+    "@ngneat/falso": "^7.1.1",
+    "@nrwl/cli": "^15.9.3",
+    "@nrwl/cypress": "^17.1.1",
+    "@nrwl/eslint-plugin-nx": "^17.1.1",
+    "@nrwl/jest": "^17.1.1",
+    "@nrwl/linter": "^17.1.1",
+    "@nrwl/nest": "^17.1.1",
+    "@nrwl/node": "^17.1.1",
+    "@nrwl/react": "^17.1.1",
+    "@nrwl/storybook": "^17.1.1",
+    "@nrwl/web": "^17.1.1",
+    "@nrwl/workspace": "^17.1.1",
+    "@storybook/addon-essentials": "^7.5.3",
+    "@storybook/builder-webpack5": "^7.5.3",
+    "@storybook/core-server": "^7.5.3",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/react": "^7.5.3",
+    "@svgr/webpack": "^8.1.0",
+    "@testing-library/react": "14.1.0",
+    "@types/jest": "^29.5.8",
+    "@types/node": "^20.9.0",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "babel-jest": "29.7.0",
+    "babel-loader": "^9.1.3",
+    "cypress": "^13.5.0",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-cypress": "^2.15.1",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "jest": "^29.7.0",
+    "nx": "^17.1.1",
+    "prettier": "^3.0.3",
+    "react-test-renderer": "^18.2.0",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2",
+    "url-loader": "^4.1.1"
+  },
+  "pathMappings": {
+    "@mtlport/design-system": [
+      "libs/design-system/src/index.ts"
+    ],
+    "@mtlport/react-lib": [
+      "libs/react-lib/src/index.ts"
+    ],
+    "@mtlport/schema": [
+      "libs/schema/src/index.ts"
+    ],
+    "@mtlport/typescript-lib": [
+      "libs/typescript-lib/src/index.ts"
+    ]
+  },
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "15388041757782744192"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "594232218447620138"
+      },
+      {
+        "file": ".nx/cache/d/daemon.log",
+        "hash": "9152268013777220195"
+      },
+      {
+        "file": ".nx/cache/d/server-process.json",
+        "hash": "6001997054920597793"
+      },
+      {
+        "file": ".nx/cache/file-map.json",
+        "hash": "3959163303576145461"
+      },
+      {
+        "file": ".nx/cache/lockfile.hash",
+        "hash": "10227373769592359146"
+      },
+      {
+        "file": ".nx/cache/parsed-lock-file.json",
+        "hash": "3635665298234559484"
+      },
+      {
+        "file": ".nx/cache/project-graph.json",
+        "hash": "12521536392547189138"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "17733650430415207254"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": ".storybook/main.js",
+        "hash": "16327388015911810737"
+      },
+      {
+        "file": ".storybook/tsconfig.json",
+        "hash": "3128062056361165723"
+      },
+      {
+        "file": "README.md",
+        "hash": "16306774561119226028"
+      },
+      {
+        "file": "babel.config.json",
+        "hash": "5546405625092116747"
+      },
+      {
+        "file": "codegen.yml",
+        "hash": "11069191799378689364"
+      },
+      {
+        "file": "docker-compose.yml",
+        "hash": "6410218594018159384"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "2950215254536237782"
+      },
+      {
+        "file": "jest.preset.js",
+        "hash": "2772139696069860212"
+      },
+      {
+        "file": "libs/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "nx.json",
+        "hash": "9030800490021669532"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "6189090558169237024"
+      },
+      {
+        "file": "package.json",
+        "hash": "3540160851852659476"
+      },
+      {
+        "file": "schema.gql",
+        "hash": "7124374733061655803"
+      },
+      {
+        "file": "tools/generators/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "tools/tsconfig.tools.json",
+        "hash": "16088922570277978783"
+      },
+      {
+        "file": "tsconfig.base.json",
+        "hash": "13878595301115544729"
+      },
+      {
+        "file": "workspace.json",
+        "hash": "193830645663423386"
+      },
+      {
+        "file": "yarn.lock",
+        "hash": "6741526395801077235"
+      }
+    ],
+    "projectFileMap": {
+      "portal": [
+        {
+          "file": "apps/portal/.babelrc",
+          "hash": "7338834004944326044"
+        },
+        {
+          "file": "apps/portal/.browserslistrc",
+          "hash": "2888533144288818662"
+        },
+        {
+          "file": "apps/portal/.eslintrc.json",
+          "hash": "10075191527724852300"
+        },
+        {
+          "file": "apps/portal/jest.config.ts",
+          "hash": "7921123670809578127"
+        },
+        {
+          "file": "apps/portal/module-federation.config.js",
+          "hash": "12610431192161217306"
+        },
+        {
+          "file": "apps/portal/project.json",
+          "hash": "4316774944117843285"
+        },
+        {
+          "file": "apps/portal/src/app/app.module.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/portal/src/app/app.tsx",
+          "hash": "15819685702524329149",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom",
+            "npm:antd",
+            [
+              "npm:admin/Module",
+              "dynamic"
+            ],
+            [
+              "npm:tower-control/Module",
+              "dynamic"
+            ]
+          ]
+        },
+        {
+          "file": "apps/portal/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/portal/src/bootstrap.tsx",
+          "hash": "17585020770301169394",
+          "deps": [
+            "npm:react",
+            "npm:react-dom",
+            "npm:@apollo/client",
+            "npm:react-router-dom",
+            "npm:@apollo/client/link/subscriptions",
+            "npm:graphql-ws",
+            "npm:@apollo/client/utilities"
+          ]
+        },
+        {
+          "file": "apps/portal/src/components/notification.scss",
+          "hash": "10750625998713235994"
+        },
+        {
+          "file": "apps/portal/src/components/notificationCenter.tsx",
+          "hash": "652239208256345588",
+          "deps": [
+            "npm:react",
+            "schema"
+          ]
+        },
+        {
+          "file": "apps/portal/src/environments/environment.prod.ts",
+          "hash": "10220522844224226756"
+        },
+        {
+          "file": "apps/portal/src/environments/environment.ts",
+          "hash": "11309522437153898482"
+        },
+        {
+          "file": "apps/portal/src/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/portal/src/index.html",
+          "hash": "18378517519659502949"
+        },
+        {
+          "file": "apps/portal/src/main.ts",
+          "hash": "10018980967429810802"
+        },
+        {
+          "file": "apps/portal/src/pages/Welcome.tsx",
+          "hash": "4429278889494036465",
+          "deps": [
+            "npm:react",
+            "react-lib",
+            "npm:antd",
+            "schema"
+          ]
+        },
+        {
+          "file": "apps/portal/src/pages/_Welcome.scss",
+          "hash": "18141200982722815584"
+        },
+        {
+          "file": "apps/portal/src/polyfills.ts",
+          "hash": "12959605551678143287",
+          "deps": [
+            "npm:core-js/stable",
+            "npm:regenerator-runtime"
+          ]
+        },
+        {
+          "file": "apps/portal/src/remotes.d.ts",
+          "hash": "8578302054079123113"
+        },
+        {
+          "file": "apps/portal/src/styles.scss",
+          "hash": "10967409772746238279"
+        },
+        {
+          "file": "apps/portal/tsconfig.app.json",
+          "hash": "6859247106828182436"
+        },
+        {
+          "file": "apps/portal/tsconfig.json",
+          "hash": "16660509110492229666"
+        },
+        {
+          "file": "apps/portal/tsconfig.spec.json",
+          "hash": "18221553742812191035"
+        },
+        {
+          "file": "apps/portal/webpack.config.js",
+          "hash": "8004794471904253294",
+          "deps": [
+            "npm:@nrwl/react/module-federation"
+          ]
+        },
+        {
+          "file": "apps/portal/webpack.config.prod.js",
+          "hash": "11674603363688819170",
+          "deps": [
+            "npm:@nrwl/react/module-federation"
+          ]
+        }
+      ],
+      "api": [
+        {
+          "file": "apps/api/.eslintrc.json",
+          "hash": "13800677001662881425"
+        },
+        {
+          "file": "apps/api/data/boats.json",
+          "hash": "5517039435058118676"
+        },
+        {
+          "file": "apps/api/data/containers.json",
+          "hash": "3467695944507463746"
+        },
+        {
+          "file": "apps/api/data/notifications.json",
+          "hash": "11601929983882729016"
+        },
+        {
+          "file": "apps/api/data/reset.ts",
+          "hash": "5715323715356712576",
+          "deps": [
+            "npm:@ngneat/falso",
+            "npm:fs"
+          ]
+        },
+        {
+          "file": "apps/api/jest.config.ts",
+          "hash": "6009935630386182799"
+        },
+        {
+          "file": "apps/api/project.json",
+          "hash": "10918756932447981462"
+        },
+        {
+          "file": "apps/api/src/app.module.ts",
+          "hash": "13500961994338343254",
+          "deps": [
+            "npm:@nestjs/apollo",
+            "npm:@nestjs/common",
+            "npm:@nestjs/graphql",
+            "npm:graphql"
+          ]
+        },
+        {
+          "file": "apps/api/src/boats/boats.module.ts",
+          "hash": "7552537778969938333",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/boats/boats.resolver.ts",
+          "hash": "1494400462848702243",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/graphql"
+          ]
+        },
+        {
+          "file": "apps/api/src/boats/boats.service.ts",
+          "hash": "3971336983402338856",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/boats/mocks/boat.mock.ts",
+          "hash": "16571287686927940036",
+          "deps": [
+            "npm:@ngneat/falso"
+          ]
+        },
+        {
+          "file": "apps/api/src/boats/models/boat.model.ts",
+          "hash": "13320290943267402927",
+          "deps": [
+            "npm:@nestjs/graphql"
+          ]
+        },
+        {
+          "file": "apps/api/src/common/directives/upper-case.directive.ts",
+          "hash": "18242113529767903580",
+          "deps": [
+            "npm:@graphql-tools/utils",
+            "npm:graphql"
+          ]
+        },
+        {
+          "file": "apps/api/src/common/scalars/date.scalar.ts",
+          "hash": "129532088338867912",
+          "deps": [
+            "npm:@nestjs/graphql",
+            "npm:graphql"
+          ]
+        },
+        {
+          "file": "apps/api/src/containers/containers.module.ts",
+          "hash": "10669943925619922675",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/containers/containers.resolver.ts",
+          "hash": "10854360031902063274",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/graphql"
+          ]
+        },
+        {
+          "file": "apps/api/src/containers/containers.service.ts",
+          "hash": "3794202051354969755",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/containers/mocks/container.mock.ts",
+          "hash": "4671048670395986816",
+          "deps": [
+            "npm:@ngneat/falso"
+          ]
+        },
+        {
+          "file": "apps/api/src/containers/models/container.model.ts",
+          "hash": "16482798981659012167",
+          "deps": [
+            "npm:@nestjs/graphql"
+          ]
+        },
+        {
+          "file": "apps/api/src/environments/environment.prod.ts",
+          "hash": "10220522844224226756"
+        },
+        {
+          "file": "apps/api/src/environments/environment.ts",
+          "hash": "1135292433917692033"
+        },
+        {
+          "file": "apps/api/src/main.ts",
+          "hash": "3955211391302870933",
+          "deps": [
+            "npm:@nestjs/common",
+            "npm:@nestjs/core"
+          ]
+        },
+        {
+          "file": "apps/api/src/notifications/models/notification.model.ts",
+          "hash": "7538678629249537286",
+          "deps": [
+            "npm:@nestjs/graphql"
+          ]
+        },
+        {
+          "file": "apps/api/src/notifications/notifications.module.ts",
+          "hash": "13048947270844509859",
+          "deps": [
+            "npm:@nestjs/common"
+          ]
+        },
+        {
+          "file": "apps/api/src/notifications/notifications.resolver.ts",
+          "hash": "17758910579674242524",
+          "deps": [
+            "npm:@nestjs/graphql",
+            "npm:graphql-subscriptions"
+          ]
+        },
+        {
+          "file": "apps/api/tsconfig.app.json",
+          "hash": "11672891240027085407"
+        },
+        {
+          "file": "apps/api/tsconfig.json",
+          "hash": "9214820933160915425"
+        },
+        {
+          "file": "apps/api/tsconfig.spec.json",
+          "hash": "10595040461224341030"
+        }
+      ],
+      "admin": [
+        {
+          "file": "apps/admin/.babelrc",
+          "hash": "7338834004944326044"
+        },
+        {
+          "file": "apps/admin/.browserslistrc",
+          "hash": "2888533144288818662"
+        },
+        {
+          "file": "apps/admin/.eslintrc.json",
+          "hash": "10075191527724852300"
+        },
+        {
+          "file": "apps/admin/jest.config.ts",
+          "hash": "2962493976076214297"
+        },
+        {
+          "file": "apps/admin/module-federation.config.js",
+          "hash": "2603765568758416413"
+        },
+        {
+          "file": "apps/admin/project.json",
+          "hash": "3919483516262573676"
+        },
+        {
+          "file": "apps/admin/src/app/app.tsx",
+          "hash": "11786591655529228945"
+        },
+        {
+          "file": "apps/admin/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/admin/src/bootstrap.tsx",
+          "hash": "4731961929376199421",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/admin/src/environments/environment.prod.ts",
+          "hash": "10220522844224226756"
+        },
+        {
+          "file": "apps/admin/src/environments/environment.ts",
+          "hash": "11309522437153898482"
+        },
+        {
+          "file": "apps/admin/src/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/admin/src/index.html",
+          "hash": "17257797254936106787"
+        },
+        {
+          "file": "apps/admin/src/main.ts",
+          "hash": "10018980967429810802"
+        },
+        {
+          "file": "apps/admin/src/polyfills.ts",
+          "hash": "12959605551678143287",
+          "deps": [
+            "npm:core-js/stable",
+            "npm:regenerator-runtime"
+          ]
+        },
+        {
+          "file": "apps/admin/src/remote-entry.ts",
+          "hash": "16889477869301519830"
+        },
+        {
+          "file": "apps/admin/src/styles.scss",
+          "hash": "5195668842064076916"
+        },
+        {
+          "file": "apps/admin/tsconfig.app.json",
+          "hash": "6859247106828182436"
+        },
+        {
+          "file": "apps/admin/tsconfig.json",
+          "hash": "16660509110492229666"
+        },
+        {
+          "file": "apps/admin/tsconfig.spec.json",
+          "hash": "18221553742812191035"
+        },
+        {
+          "file": "apps/admin/webpack.config.js",
+          "hash": "8004794471904253294",
+          "deps": [
+            "npm:@nrwl/react/module-federation"
+          ]
+        },
+        {
+          "file": "apps/admin/webpack.config.prod.js",
+          "hash": "15953509134499926520"
+        }
+      ],
+      "tower-control": [
+        {
+          "file": "apps/tower-control/.babelrc",
+          "hash": "7338834004944326044"
+        },
+        {
+          "file": "apps/tower-control/.browserslistrc",
+          "hash": "2888533144288818662"
+        },
+        {
+          "file": "apps/tower-control/.eslintrc.json",
+          "hash": "10075191527724852300"
+        },
+        {
+          "file": "apps/tower-control/jest.config.ts",
+          "hash": "8272424800466183455"
+        },
+        {
+          "file": "apps/tower-control/module-federation.config.js",
+          "hash": "13696717980869075192"
+        },
+        {
+          "file": "apps/tower-control/project.json",
+          "hash": "6524120264183376156"
+        },
+        {
+          "file": "apps/tower-control/src/app/TowerControlApp.tsx",
+          "hash": "3397826234437549468",
+          "deps": [
+            "npm:react",
+            "npm:react-router-dom"
+          ]
+        },
+        {
+          "file": "apps/tower-control/src/app/_TowerControlApp.scss",
+          "hash": "705188318710165179"
+        },
+        {
+          "file": "apps/tower-control/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "apps/tower-control/src/bootstrap.tsx",
+          "hash": "5133889102470065946",
+          "deps": [
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "apps/tower-control/src/environments/environment.prod.ts",
+          "hash": "10220522844224226756"
+        },
+        {
+          "file": "apps/tower-control/src/environments/environment.ts",
+          "hash": "11309522437153898482"
+        },
+        {
+          "file": "apps/tower-control/src/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "apps/tower-control/src/index.html",
+          "hash": "5302060104103435209"
+        },
+        {
+          "file": "apps/tower-control/src/main.ts",
+          "hash": "10018980967429810802"
+        },
+        {
+          "file": "apps/tower-control/src/molecules/BoatCard.molecule.tsx",
+          "hash": "18061125004120537718",
+          "deps": [
+            "npm:react",
+            "react-lib",
+            "design-system",
+            "npm:react-router-dom",
+            "npm:antd",
+            "schema"
+          ]
+        },
+        {
+          "file": "apps/tower-control/src/molecules/_BoatCardMolecule.scss",
+          "hash": "2212300934924068112"
+        },
+        {
+          "file": "apps/tower-control/src/organism/BoatListOrganism.tsx",
+          "hash": "1153961309672424280",
+          "deps": [
+            "npm:react",
+            "react-lib",
+            "schema",
+            "npm:fast-sort"
+          ]
+        },
+        {
+          "file": "apps/tower-control/src/organism/ContainerListOrganism.tsx",
+          "hash": "16889433150395315814",
+          "deps": [
+            "npm:react",
+            "react-lib",
+            "schema",
+            "npm:antd"
+          ]
+        },
+        {
+          "file": "apps/tower-control/src/organism/PortStatusOrganism.tsx",
+          "hash": "5197437138856103939",
+          "deps": [
+            "npm:react",
+            "react-lib",
+            "schema",
+            "design-system"
+          ]
+        },
+        {
+          "file": "apps/tower-control/src/organism/PriorityContainerOrganism.tsx",
+          "hash": "8057703373296941797",
+          "deps": [
+            "npm:react",
+            "react-lib",
+            "schema",
+            "npm:fast-sort"
+          ]
+        },
+        {
+          "file": "apps/tower-control/src/organism/_BoatListOrganism.scss",
+          "hash": "12439065849202326558"
+        },
+        {
+          "file": "apps/tower-control/src/organism/_ContainerListOrganism.scss",
+          "hash": "5638118623612511620"
+        },
+        {
+          "file": "apps/tower-control/src/organism/_PortStatusOrganism.scss",
+          "hash": "1115292915076051450"
+        },
+        {
+          "file": "apps/tower-control/src/organism/_PriorityContainerOrganism.scss",
+          "hash": "9061068529738793605"
+        },
+        {
+          "file": "apps/tower-control/src/pages/Boat.page.tsx",
+          "hash": "10197284687961454281",
+          "deps": [
+            "npm:react",
+            "npm:antd",
+            "react-lib",
+            "npm:react-router-dom",
+            "schema",
+            "design-system",
+            "npm:fast-sort"
+          ]
+        },
+        {
+          "file": "apps/tower-control/src/pages/Dashboard.page.tsx",
+          "hash": "9956491073284790016",
+          "deps": [
+            "npm:react",
+            "react-lib",
+            "npm:antd"
+          ]
+        },
+        {
+          "file": "apps/tower-control/src/pages/_BoatPage.scss",
+          "hash": "18286946431582355883"
+        },
+        {
+          "file": "apps/tower-control/src/pages/_DashboardPage.scss",
+          "hash": "16880460884689197383"
+        },
+        {
+          "file": "apps/tower-control/src/polyfills.ts",
+          "hash": "12959605551678143287",
+          "deps": [
+            "npm:core-js/stable",
+            "npm:regenerator-runtime"
+          ]
+        },
+        {
+          "file": "apps/tower-control/src/remote-entry.ts",
+          "hash": "10733108340501330764"
+        },
+        {
+          "file": "apps/tower-control/src/styles.scss",
+          "hash": "5195668842064076916"
+        },
+        {
+          "file": "apps/tower-control/tsconfig.app.json",
+          "hash": "6859247106828182436"
+        },
+        {
+          "file": "apps/tower-control/tsconfig.json",
+          "hash": "16660509110492229666"
+        },
+        {
+          "file": "apps/tower-control/tsconfig.spec.json",
+          "hash": "18221553742812191035"
+        },
+        {
+          "file": "apps/tower-control/webpack.config.js",
+          "hash": "8004794471904253294",
+          "deps": [
+            "npm:@nrwl/react/module-federation"
+          ]
+        },
+        {
+          "file": "apps/tower-control/webpack.config.prod.js",
+          "hash": "15953509134499926520"
+        }
+      ],
+      "schema": [
+        {
+          "file": "libs/schema/.babelrc",
+          "hash": "2685020516260856122"
+        },
+        {
+          "file": "libs/schema/.eslintrc.json",
+          "hash": "13800677001662881425"
+        },
+        {
+          "file": "libs/schema/README.md",
+          "hash": "13655815564096994159"
+        },
+        {
+          "file": "libs/schema/jest.config.ts",
+          "hash": "813534352823150839"
+        },
+        {
+          "file": "libs/schema/project.json",
+          "hash": "3571689037388520667"
+        },
+        {
+          "file": "libs/schema/src/gen/graphql.ts",
+          "hash": "10842219259285590880",
+          "deps": [
+            "npm:graphql",
+            "npm:@apollo/client"
+          ]
+        },
+        {
+          "file": "libs/schema/src/gen/schema.graphql",
+          "hash": "4634069422716443836"
+        },
+        {
+          "file": "libs/schema/src/index.ts",
+          "hash": "14421416981672473012"
+        },
+        {
+          "file": "libs/schema/src/mutations/sendNotification.graphql",
+          "hash": "17250293208724928947"
+        },
+        {
+          "file": "libs/schema/src/queries/getBoats.graphql",
+          "hash": "3691736574198339990"
+        },
+        {
+          "file": "libs/schema/src/queries/getContainers.graphql",
+          "hash": "5530873564151854524"
+        },
+        {
+          "file": "libs/schema/src/subscriptions/notifications-sub.graphql",
+          "hash": "14534833764303335410"
+        },
+        {
+          "file": "libs/schema/tsconfig.json",
+          "hash": "17079550796797979564"
+        },
+        {
+          "file": "libs/schema/tsconfig.lib.json",
+          "hash": "13034901906147047048"
+        },
+        {
+          "file": "libs/schema/tsconfig.spec.json",
+          "hash": "2406015174838385060"
+        }
+      ],
+      "typescript-lib": [
+        {
+          "file": "libs/typescript-lib/.babelrc",
+          "hash": "11855890993922274285"
+        },
+        {
+          "file": "libs/typescript-lib/.eslintrc.json",
+          "hash": "10075191527724852300"
+        },
+        {
+          "file": "libs/typescript-lib/README.md",
+          "hash": "13654301440201979498"
+        },
+        {
+          "file": "libs/typescript-lib/jest.config.ts",
+          "hash": "4490328349140153757"
+        },
+        {
+          "file": "libs/typescript-lib/project.json",
+          "hash": "5409011897902750787"
+        },
+        {
+          "file": "libs/typescript-lib/src/array/array.utils.test.ts",
+          "hash": "17649555096659080122"
+        },
+        {
+          "file": "libs/typescript-lib/src/array/array.utils.ts",
+          "hash": "2336729698870446220"
+        },
+        {
+          "file": "libs/typescript-lib/src/index.ts",
+          "hash": "6949709477747554488"
+        },
+        {
+          "file": "libs/typescript-lib/tsconfig.json",
+          "hash": "11477590071370859811"
+        },
+        {
+          "file": "libs/typescript-lib/tsconfig.lib.json",
+          "hash": "6859247106828182436"
+        },
+        {
+          "file": "libs/typescript-lib/tsconfig.spec.json",
+          "hash": "2406015174838385060"
+        }
+      ],
+      "design-system": [
+        {
+          "file": "libs/design-system/.babelrc",
+          "hash": "11855890993922274285"
+        },
+        {
+          "file": "libs/design-system/.eslintrc.json",
+          "hash": "10075191527724852300"
+        },
+        {
+          "file": "libs/design-system/.storybook/main.js",
+          "hash": "9890635147922672177",
+          "deps": [
+            "npm:../../../.storybook/main"
+          ]
+        },
+        {
+          "file": "libs/design-system/.storybook/preview.js",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "libs/design-system/.storybook/tsconfig.json",
+          "hash": "9443524997762654494"
+        },
+        {
+          "file": "libs/design-system/README.md",
+          "hash": "11720195962995456299"
+        },
+        {
+          "file": "libs/design-system/jest.config.ts",
+          "hash": "11628216277915038168"
+        },
+        {
+          "file": "libs/design-system/project.json",
+          "hash": "4740386218626773717"
+        },
+        {
+          "file": "libs/design-system/src/button/Button.tsx",
+          "hash": "10807610449391300144",
+          "deps": [
+            "npm:react",
+            "npm:antd"
+          ]
+        },
+        {
+          "file": "libs/design-system/src/card/Card.tsx",
+          "hash": "364922034848152912",
+          "deps": [
+            "npm:react",
+            "npm:antd"
+          ]
+        },
+        {
+          "file": "libs/design-system/src/index.ts",
+          "hash": "16464807938338349169"
+        },
+        {
+          "file": "libs/design-system/src/tokens/_animations.scss",
+          "hash": "3009353176887351144"
+        },
+        {
+          "file": "libs/design-system/src/tokens/_colors.scss",
+          "hash": "15971539256546388123"
+        },
+        {
+          "file": "libs/design-system/src/tokens/_mixins.scss",
+          "hash": "4171817740340667698"
+        },
+        {
+          "file": "libs/design-system/src/tokens/_spacing.scss",
+          "hash": "6490435936328148386"
+        },
+        {
+          "file": "libs/design-system/src/tokens/_tokens.scss",
+          "hash": "9712724121975005733"
+        },
+        {
+          "file": "libs/design-system/src/tokens/_typography.scss",
+          "hash": "12187924232571033073"
+        },
+        {
+          "file": "libs/design-system/src/tokens/_variant.scss",
+          "hash": "7601522757137245579"
+        },
+        {
+          "file": "libs/design-system/tsconfig.json",
+          "hash": "15803385393668032353"
+        },
+        {
+          "file": "libs/design-system/tsconfig.lib.json",
+          "hash": "12137975809700632664"
+        },
+        {
+          "file": "libs/design-system/tsconfig.spec.json",
+          "hash": "2406015174838385060"
+        }
+      ],
+      "react-lib": [
+        {
+          "file": "libs/react-lib/.babelrc",
+          "hash": "11855890993922274285"
+        },
+        {
+          "file": "libs/react-lib/.eslintrc.json",
+          "hash": "10075191527724852300"
+        },
+        {
+          "file": "libs/react-lib/README.md",
+          "hash": "14041591995336838199"
+        },
+        {
+          "file": "libs/react-lib/jest.config.ts",
+          "hash": "12738484458713335163"
+        },
+        {
+          "file": "libs/react-lib/project.json",
+          "hash": "7246417133839098695"
+        },
+        {
+          "file": "libs/react-lib/src/bem/bem.test.tsx",
+          "hash": "9968049903185464025",
+          "deps": [
+            "npm:react"
+          ]
+        },
+        {
+          "file": "libs/react-lib/src/bem/bem.tsx",
+          "hash": "16015089425682265342",
+          "deps": [
+            "npm:react",
+            "npm:classnames",
+            "typescript-lib"
+          ]
+        },
+        {
+          "file": "libs/react-lib/src/index.ts",
+          "hash": "7145523273035986070"
+        },
+        {
+          "file": "libs/react-lib/tsconfig.json",
+          "hash": "11477590071370859811"
+        },
+        {
+          "file": "libs/react-lib/tsconfig.lib.json",
+          "hash": "6859247106828182436"
+        },
+        {
+          "file": "libs/react-lib/tsconfig.spec.json",
+          "hash": "2406015174838385060"
+        }
+      ]
+    }
+  }
+}
